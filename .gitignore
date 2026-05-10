@@ -1,0 +1,28 @@
+# Virtual Environment
+m_env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# SQLite database
+db.sqlite3
+
+# Environment variables
+.env
+
+# Media files (uploaded files)
+media/
+
+# Static collected files
+staticfiles/
+
+# VS Code
+.vscode/
+
+# PyCharm
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
