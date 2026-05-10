@@ -1,11 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>User Table</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body{
+            background: #f4f7fc;
+            padding: 40px;
+        }
+
+        .container{
+            max-width: 1000px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        h1{
+            text-align: center;
+            margin-bottom: 25px;
+            color: #1e293b;
+        }
+
+        table{
+            width: 100%;
+            border-collapse: collapse;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        thead{
+            background: #2563eb;
+            color: white;
+        }
+
+        thead th{
+            padding: 15px;
+            text-align: left;
+            font-size: 16px;
+        }
+
+        tbody tr{
+            border-bottom: 1px solid #e5e7eb;
+            transition: 0.3s;
+        }
+
+        tbody tr:hover{
+            background: #f1f5f9;
+        }
+
+        tbody td{
+            padding: 14px;
+            color: #334155;
+        }
+
+        .id-box{
+            background: #dbeafe;
+            color: #1d4ed8;
+            padding: 6px 10px;
+            border-radius: 6px;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        @media (max-width: 768px){
+            table{
+                font-size: 14px;
+            }
+
+            thead th,
+            tbody td{
+                padding: 10px;
+            }
+
+            h1{
+                font-size: 22px;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Response comming from tamplates</h1>
+
+    <div class="container">
+        <h1>User Details</h1>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Full Name</th>
+                    <th>Designation</th>
+                    <th>Phone Number</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {% for user in users %}
+                <tr>
+                    <td>
+                        <span class="id-box">
+                            {{user.id}}
+                        </span>
+                    </td>
+
+                    <td>
+                        {{user.first_name}} {{user.last_name}}
+                    </td>
+
+                    <td>
+                        {{user.designation}}
+                    </td>
+
+                    <td>
+                        {{user.phone_number}}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
 </body>
 </html>
