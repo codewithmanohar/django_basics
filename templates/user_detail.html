@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Table</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+
+
+    <div class="card mx-auto" style="width: 18rem;">
+        <img src="{{user.photo.url}}" class="card-img-top" alt="user_photo">
+        <div class="card-body">
+            <p class="card-text m-0">{{user.first_name}} {{user.last_name}}</p>
+            <p class="card-text m-0">{{ user.designation}}</p>
+            <p class="card-text m-0">{{ user.email_address}}</p>
+            <p class="card-text m-0">{{ user.phone_number}}</p>
+        </div>
+        <a href="/" class="btn btn-primary">Back to Home</a>
+    </div>
+
+
+</body>
+
+</html>
