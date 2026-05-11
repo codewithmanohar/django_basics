@@ -1,21 +1,30 @@
-# Virtual Environment
-m_env/
-
 # Python cache
 __pycache__/
 *.py[cod]
+*$py.class
 
-# SQLite database
+# Virtual Environment
+venv/
+env/
+ENV/
+.venv/
+
+# Django stuff
+*.log
 db.sqlite3
+db.sqlite3-journal
 
 # Environment variables
 .env
 
-# Media files (uploaded files)
+# Static & media files
 media/
-
-# Static collected files
 staticfiles/
+
+# Python build files
+build/
+dist/
+*.egg-info/
 
 # VS Code
 .vscode/
@@ -26,3 +35,12 @@ staticfiles/
 # OS files
 .DS_Store
 Thumbs.db
+
+# Coverage / testing
+.coverage
+htmlcov/
+.pytest_cache/
+
+# Migrations (optional)
+# */migrations/*.py
+# !*/migrations/__init__.py
